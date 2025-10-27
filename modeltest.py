@@ -14,8 +14,8 @@ from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
 from sklearn.cross_decomposition import PLSRegression
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
-st.set_page_config(page_title="LET'S AI・収量予測ツール（回帰）", layout="wide")
-st.title("🌾 LET'S AI・収量予測ツール（回帰）")
+st.set_page_config(page_title="モデルテスト", layout="wide")
+st.title("モデルテスト")
 st.caption("Excel/CSV をアップロード → 目的変数/説明変数を選択 → モデルを実行 → R²/RMSE/MAE を確認・可視化・ダウンロード")
 
 # ------------------ サイドバー：設定 ------------------
@@ -292,3 +292,4 @@ if up is not None and df is not None and run:
             "standardized": standardize,
             "params": params
         })
+
