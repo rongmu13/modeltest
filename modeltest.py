@@ -58,7 +58,7 @@ with right:
             st.error("数値列が検出されませんでした。ファイル内容をご確認ください。")
             st.stop()
 
-        target_col = st.selectbox("目的変数（例：yield / 収量 / 単収）", num_cols, index=0)
+        target_col = st.selectbox("目的変数", num_cols, index=0)
         feature_candidates = [c for c in num_cols if c != target_col]
         default_X = feature_candidates[:min(8, len(feature_candidates))]
         feature_cols = st.multiselect("説明変数（複数選択可）", feature_candidates, default=default_X)
@@ -292,4 +292,5 @@ if up is not None and df is not None and run:
             "standardized": standardize,
             "params": params
         })
+
 
